@@ -48,8 +48,8 @@ def df_from_local_csv(filename):
     return df
 
 
-def df_to_bq(df):
-    pgbq.to_gbq(df, TABLE_ID, project_id=PROJECT_ID)
+def df_to_bq(df: pd.DataFrame, tableId: str = TABLE_ID):
+    pgbq.to_gbq(df, tableId, project_id=PROJECT_ID, if_exists="replace")
 
 
 if __name__ == "__main__":

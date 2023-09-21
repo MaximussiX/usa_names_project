@@ -1,5 +1,10 @@
 import pandas as pd
+
+# my library
 import dl_up_gcp as dl
+
+# my credentials
+import credentials as cred
 
 
 def add_statename_df_togbq(
@@ -53,6 +58,6 @@ if __name__ == "__main__":
     df_names = dl.df_from_local_csv("testname.csv")
     df_states = dl.df_from_local_csv("states.csv")
     df_full = add_statename_df_togbq(df_names, df_states)
-    df_state2 = state_abreviation_tobq(df_full, False, "dwh_usnames.states")
-    df_name_oc = name_occurence_df(df_full, False, "dwh_usnames.names_occurences")
+    df_state2 = state_abreviation_tobq(df_full, False, cred.TABLE_ID_STATES)
+    df_name_oc = name_occurence_df(df_full, False, cred.TABLE_ID_NAMEOCC)
     df_name_oc_sorted = sort_by_names_occurence(df_name_oc)

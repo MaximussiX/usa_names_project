@@ -3,20 +3,14 @@ import pandas as pd
 import pandas_gbq as pgbq
 import io
 
-# PROJECT
-PROJECT_ID = "data-engineer-book-project-1"
-# GCS
-BUCKET_NAME = "usa_names_testsolo"
-FILE_NAME = "usa_names_1910_current"
-GSUTIL_URI_FILE = "gs://usa_names_testsolo/usa_names_1910_current"
-# BIGQUERY
-TABLE_ID = "dwh_usnames.usanames_raw"
+# my credentials
+import credentials as cred
 
 
 def init_blob_gcs():
-    storage_client = storage.Client(PROJECT_ID)
-    bucket = storage_client.get_bucket(BUCKET_NAME)
-    blob = bucket.blob(FILE_NAME)
+    storage_client = storage.Client(cred.PROJECT_ID)
+    bucket = storage_client.get_bucket(cred.BUCKET_NAME)
+    blob = bucket.blob(cred.FILE_NAME)
     return blob
 
 
@@ -32,7 +26,7 @@ def dl_from_gcs_to_df_way1():
 
 def dl_from_gcs_to_df_way2():
     # download as a string to put on dataframe : way 2
-    data_from_gcs_w2 = pd.read_csv(GSUTIL_URI_FILE)
+    data_from_gcs_w2 = pd.read_csv(cred.GSUTIL_URI_FILE)
     print(data_from_gcs_w2)
     return data_from_gcs_w2
 
@@ -48,8 +42,8 @@ def df_from_local_csv(filename):
     return df
 
 
-def df_to_bq(df: pd.DataFrame, tableId: str = TABLE_ID):
-    pgbq.to_gbq(df, tableId, project_id=PROJECT_ID, if_exists="replace")
+def df_to_bq(df: pd.DataFrame, tableId: str = cred.TABLE_ID_USANAMES):
+    pgbq.to_gbq(df, tableId, project_id=cred.PROJECT_ID, if_exists="replace")
 
 
 if __name__ == "__main__":

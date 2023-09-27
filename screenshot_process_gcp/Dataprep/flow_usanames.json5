@@ -1,0 +1,2423 @@
+{
+  type: 'flow',
+  kind: 'artifact',
+  metadata: {
+    trifactaVersion: '10.1.0+2986503.20230707151310.f990a1da',
+    exportedAt: '2023-09-27T09:36:36.719Z',
+    exportedBy: 602389,
+    uuid: '5a64dff0-5d19-11ee-b75a-9748baaa74f3',
+    comment: '',
+    primaryFlowIds: [
+      1776991,
+    ],
+    edition: 'Dataprep',
+    lastMigration: '20220721085341',
+  },
+  data: {
+    artifacts: [],
+    connections: [],
+    flows: [
+      {
+        settings: {
+          optimize: 'default',
+          optimizers: {
+            columnPruning: 'enabled',
+            filterPushdown: 'enabled',
+            columnPruningOnSource: 'enabled',
+            filterPushdownOnSource: 'enabled',
+            joinPushdown: 'enabled',
+            expressionPushdown: 'enabled',
+            aggPushdown: 'enabled',
+            unionPushdown: 'enabled',
+            mergePushdown: 'enabled',
+            profilePushdown: 'enabled',
+            samplePushdown: 'enabled',
+            customJsUdfPushdown: 'enabled',
+            advancedPushdown: 'enabled',
+            filesToBigQuery: 'enabled',
+            filesToSnowflake: 'default',
+            CDWToFiles: 'enabled',
+            fullPushdown: 'default',
+          },
+          dbOverrides: {},
+        },
+        id: 1776991,
+        name: 'usanames',
+        description: null,
+        defaultOutputDir: null,
+        fromExampleFlowHash: null,
+        fromExampleFlowName: null,
+        fromTemplateId: null,
+        flownodes: [
+          {
+            id: 9785989,
+            scriptId: 8691700,
+            flowNodeId: null,
+            wrangled: false,
+            referenceId: null,
+            sampleLoadLimit: null,
+          },
+          {
+            id: 9785990,
+            scriptId: 8691701,
+            flowNodeId: null,
+            wrangled: true,
+            referenceId: null,
+            sampleLoadLimit: null,
+          },
+          {
+            id: 9786261,
+            scriptId: 8691957,
+            flowNodeId: null,
+            wrangled: true,
+            referenceId: null,
+            sampleLoadLimit: null,
+          },
+          {
+            id: 9787186,
+            scriptId: 8692774,
+            flowNodeId: null,
+            wrangled: true,
+            referenceId: null,
+            sampleLoadLimit: null,
+          },
+        ],
+        notes: [],
+        flowgraphvertices: [
+          {
+            id: 14519754,
+            objectType: 'flownode',
+            objectId: 9785989,
+            x: 4,
+            y: 65,
+            width: null,
+            height: null,
+          },
+          {
+            id: 14519755,
+            objectType: 'flownode',
+            objectId: 9785990,
+            x: 244,
+            y: 64,
+            width: null,
+            height: null,
+          },
+          {
+            id: 14520279,
+            objectType: 'flownode',
+            objectId: 9786261,
+            x: 484,
+            y: 214,
+            width: null,
+            height: null,
+          },
+          {
+            id: 14522068,
+            objectType: 'flownode',
+            objectId: 9787186,
+            x: 485,
+            y: 372,
+            width: null,
+            height: null,
+          },
+          {
+            id: 14519756,
+            objectType: 'outputobject',
+            objectId: 1420114,
+            x: 484,
+            y: 65,
+            width: null,
+            height: null,
+          },
+          {
+            id: 14522370,
+            objectType: 'outputobject',
+            objectId: 1420217,
+            x: 725,
+            y: 372,
+            width: null,
+            height: null,
+          },
+          {
+            id: 14522433,
+            objectType: 'outputobject',
+            objectId: 1420224,
+            x: 724,
+            y: 214,
+            width: null,
+            height: null,
+          },
+        ],
+        flowedges: [
+          {
+            id: 7974101,
+            inFlowNodeId: 9785989,
+            inPortId: null,
+            outFlowNodeId: 9785990,
+            outPortId: null,
+          },
+          {
+            id: 7974322,
+            inFlowNodeId: 9785990,
+            inPortId: null,
+            outFlowNodeId: 9786261,
+            outPortId: null,
+          },
+          {
+            id: 7975066,
+            inFlowNodeId: 9785990,
+            inPortId: null,
+            outFlowNodeId: 9787186,
+            outPortId: null,
+          },
+        ],
+        references: [],
+        flowrunparameteroverrides: [],
+        runparameters: [],
+        recipes: [
+          {
+            id: 8691700,
+            name: 'usa_names_1910_current',
+            description: null,
+            active: true,
+            nextPortId: 1,
+            steps: [
+              {
+                columnMetadata: null,
+                task: {
+                  annotations: {
+                    hidden: true,
+                  },
+                  kind: 'task',
+                  type: 'Load',
+                  parameters: {
+                    format: {
+                      annotations: {},
+                      kind: 'func',
+                      type: 'FormatBlob',
+                      parameters: {},
+                    },
+                    location: {
+                      kind: 'constant',
+                      type: 'String',
+                      value: 'id://3070804',
+                    },
+                    enableLineage: {
+                      kind: 'constant',
+                      type: 'Bool',
+                      value: true,
+                    },
+                    as: {
+                      kind: 'array',
+                      type: 'Array',
+                      value: [
+                        {
+                          kind: 'constant',
+                          type: 'String',
+                          value: 'column1',
+                        },
+                      ],
+                    },
+                  },
+                  outputName: 'original_datasource_3070804',
+                },
+                tableData: null,
+                portId: null,
+                id: 55079057,
+                hash: '3b53ff9617087381ee677a215b2621825702c03c',
+                pbemappingartifacts: [],
+                targetmappingartifacts: [],
+                udfscriptlines: [],
+                dependencies: [],
+              },
+              {
+                columnMetadata: null,
+                task: {
+                  annotations: {
+                    outputColumnAnnotations: {
+                      column1: {
+                        type: [
+                          'String',
+                        ],
+                        _likely_types: [
+                          [
+                            'String',
+                          ],
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                          [
+                            'SSN',
+                          ],
+                          [
+                            'Map',
+                          ],
+                        ],
+                      },
+                    },
+                  },
+                  kind: 'task',
+                  type: 'SplitRows',
+                  parameters: {
+                    on: {
+                      kind: 'constant',
+                      type: 'String',
+                      value: '\n',
+                    },
+                    col: {
+                      kind: 'column',
+                      type: 'Column',
+                      value: 'column1',
+                      relation: null,
+                    },
+                  },
+                  outputName: null,
+                },
+                tableData: null,
+                portId: null,
+                id: 55079058,
+                hash: '78fae58ffc390e6c061a056bb0a4ec0317c9f8f6',
+                pbemappingartifacts: [],
+                targetmappingartifacts: [],
+                udfscriptlines: [],
+                dependencies: [],
+              },
+              {
+                columnMetadata: null,
+                task: {
+                  annotations: {
+                    outputColumnAnnotations: {
+                      column2: {
+                        type: [
+                          'State',
+                        ],
+                        _likely_types: [
+                          [
+                            'State',
+                          ],
+                          [
+                            'String',
+                          ],
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                          [
+                            'SSN',
+                          ],
+                        ],
+                      },
+                      column3: {
+                        type: [
+                          'Gender',
+                        ],
+                        _likely_types: [
+                          [
+                            'Gender',
+                          ],
+                          [
+                            'Bool',
+                          ],
+                          [
+                            'String',
+                          ],
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                        ],
+                      },
+                      column4: {
+                        type: [
+                          'Datetime',
+                          'yy',
+                          'yyyy',
+                        ],
+                        _likely_types: [
+                          [
+                            'Datetime',
+                            'yy',
+                            'yyyy',
+                          ],
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'String',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                          [
+                            'SSN',
+                          ],
+                        ],
+                      },
+                      column5: {
+                        type: [
+                          'String',
+                        ],
+                        _likely_types: [
+                          [
+                            'String',
+                          ],
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                          [
+                            'SSN',
+                          ],
+                          [
+                            'Map',
+                          ],
+                        ],
+                      },
+                      column6: {
+                        type: [
+                          'Integer',
+                        ],
+                        _likely_types: [
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'Float',
+                          ],
+                          [
+                            'String',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                          [
+                            'SSN',
+                          ],
+                        ],
+                      },
+                    },
+                  },
+                  kind: 'task',
+                  type: 'Split',
+                  parameters: {
+                    col: {
+                      kind: 'column',
+                      type: 'Column',
+                      value: 'column1',
+                      relation: null,
+                    },
+                    type: {
+                      kind: 'bundle',
+                      type: 'Bundle',
+                      value: 'on',
+                    },
+                    on: {
+                      kind: 'constant',
+                      type: 'String',
+                      value: ',',
+                    },
+                    limit: {
+                      kind: 'constant',
+                      type: 'Integer',
+                      value: 4,
+                    },
+                    quote: {
+                      kind: 'constant',
+                      type: 'String',
+                      value: '"',
+                    },
+                    as: {
+                      kind: 'array',
+                      type: 'Array',
+                      value: [
+                        {
+                          kind: 'constant',
+                          type: 'String',
+                          value: 'column2',
+                        },
+                        {
+                          kind: 'constant',
+                          type: 'String',
+                          value: 'column3',
+                        },
+                        {
+                          kind: 'constant',
+                          type: 'String',
+                          value: 'column4',
+                        },
+                        {
+                          kind: 'constant',
+                          type: 'String',
+                          value: 'column5',
+                        },
+                        {
+                          kind: 'constant',
+                          type: 'String',
+                          value: 'column6',
+                        },
+                      ],
+                    },
+                  },
+                  outputName: null,
+                },
+                tableData: null,
+                portId: null,
+                id: 55079059,
+                hash: '3e4e469a53eb97cc9fb03a8182ce64e1e741cc34',
+                pbemappingartifacts: [],
+                targetmappingartifacts: [],
+                udfscriptlines: [],
+                dependencies: [],
+              },
+              {
+                columnMetadata: null,
+                task: {
+                  annotations: {
+                    outputColumnAnnotations: {
+                      column2: {
+                        type: [
+                          'State',
+                        ],
+                        _likely_types: [
+                          [
+                            'State',
+                          ],
+                          [
+                            'String',
+                          ],
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                          [
+                            'SSN',
+                          ],
+                        ],
+                      },
+                      column3: {
+                        type: [
+                          'Gender',
+                        ],
+                        _likely_types: [
+                          [
+                            'Gender',
+                          ],
+                          [
+                            'Bool',
+                          ],
+                          [
+                            'String',
+                          ],
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                        ],
+                      },
+                      column4: {
+                        type: [
+                          'Datetime',
+                          'yy',
+                          'yyyy',
+                        ],
+                        _likely_types: [
+                          [
+                            'Datetime',
+                            'yy',
+                            'yyyy',
+                          ],
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'String',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                          [
+                            'SSN',
+                          ],
+                        ],
+                      },
+                      column5: {
+                        type: [
+                          'String',
+                        ],
+                        _likely_types: [
+                          [
+                            'String',
+                          ],
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                          [
+                            'SSN',
+                          ],
+                          [
+                            'Map',
+                          ],
+                        ],
+                      },
+                      column6: {
+                        type: [
+                          'Integer',
+                        ],
+                        _likely_types: [
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'Float',
+                          ],
+                          [
+                            'String',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                          [
+                            'SSN',
+                          ],
+                        ],
+                      },
+                    },
+                  },
+                  kind: 'task',
+                  type: 'Set',
+                  parameters: {
+                    col: {
+                      kind: 'array',
+                      type: 'Array',
+                      value: [
+                        {
+                          kind: 'column',
+                          type: 'Wildcard',
+                          value: '*',
+                          annotations: {
+                            includeLineage: false,
+                            includeFileLineage: false,
+                          },
+                          relation: null,
+                        },
+                      ],
+                    },
+                    value: {
+                      annotations: {},
+                      kind: 'func',
+                      type: 'If',
+                      parameters: {
+                        true_expression: {
+                          annotations: {},
+                          kind: 'func',
+                          type: 'Substitute',
+                          parameters: {
+                            ignoreCase: {
+                              kind: 'constant',
+                              type: 'Bool',
+                              value: false,
+                            },
+                            col: {
+                              annotations: {},
+                              kind: 'func',
+                              type: 'Trim',
+                              parameters: {
+                                col: {
+                                  kind: 'variable',
+                                  type: 'Variable',
+                                  value: 'col',
+                                },
+                              },
+                            },
+                            on: {
+                              kind: 'constant',
+                              type: 'Pattern',
+                              value: '{start}"|"{end}',
+                            },
+                            with: {
+                              kind: 'constant',
+                              type: 'String',
+                              value: '',
+                            },
+                          },
+                        },
+                        false_expression: {
+                          kind: 'variable',
+                          type: 'Variable',
+                          value: 'col',
+                        },
+                        predicate: {
+                          annotations: {},
+                          kind: 'func',
+                          type: 'And',
+                          parameters: {
+                            lhs: {
+                              annotations: {},
+                              kind: 'func',
+                              type: 'StartsWith',
+                              parameters: {
+                                ignore_case: {
+                                  kind: 'constant',
+                                  type: 'Bool',
+                                  value: false,
+                                },
+                                lhs: {
+                                  annotations: {},
+                                  kind: 'func',
+                                  type: 'Trim',
+                                  parameters: {
+                                    col: {
+                                      kind: 'variable',
+                                      type: 'Variable',
+                                      value: 'col',
+                                    },
+                                  },
+                                },
+                                rhs: {
+                                  kind: 'constant',
+                                  type: 'String',
+                                  value: '"',
+                                },
+                              },
+                            },
+                            rhs: {
+                              annotations: {},
+                              kind: 'func',
+                              type: 'EndsWith',
+                              parameters: {
+                                ignore_case: {
+                                  kind: 'constant',
+                                  type: 'Bool',
+                                  value: false,
+                                },
+                                lhs: {
+                                  annotations: {},
+                                  kind: 'func',
+                                  type: 'Trim',
+                                  parameters: {
+                                    col: {
+                                      kind: 'variable',
+                                      type: 'Variable',
+                                      value: 'col',
+                                    },
+                                  },
+                                },
+                                rhs: {
+                                  kind: 'constant',
+                                  type: 'String',
+                                  value: '"',
+                                },
+                              },
+                            },
+                          },
+                        },
+                      },
+                    },
+                  },
+                  outputName: null,
+                },
+                tableData: null,
+                portId: null,
+                id: 55079060,
+                hash: 'edbd41ee2ad4c39fbf61bbcf1e6eb6f50570c323',
+                pbemappingartifacts: [],
+                targetmappingartifacts: [],
+                udfscriptlines: [],
+                dependencies: [],
+              },
+              {
+                columnMetadata: null,
+                task: {
+                  annotations: {
+                    outputColumnAnnotations: {
+                      column2: {
+                        type: [
+                          'State',
+                        ],
+                        _likely_types: [
+                          [
+                            'State',
+                          ],
+                          [
+                            'String',
+                          ],
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                          [
+                            'SSN',
+                          ],
+                        ],
+                      },
+                      column3: {
+                        type: [
+                          'Gender',
+                        ],
+                        _likely_types: [
+                          [
+                            'Gender',
+                          ],
+                          [
+                            'Bool',
+                          ],
+                          [
+                            'String',
+                          ],
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                        ],
+                      },
+                      column4: {
+                        type: [
+                          'Datetime',
+                          'yy',
+                          'yyyy',
+                        ],
+                        _likely_types: [
+                          [
+                            'Datetime',
+                            'yy',
+                            'yyyy',
+                          ],
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'String',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                          [
+                            'SSN',
+                          ],
+                        ],
+                      },
+                      column5: {
+                        type: [
+                          'String',
+                        ],
+                        _likely_types: [
+                          [
+                            'String',
+                          ],
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                          [
+                            'SSN',
+                          ],
+                          [
+                            'Map',
+                          ],
+                        ],
+                      },
+                      column6: {
+                        type: [
+                          'Integer',
+                        ],
+                        _likely_types: [
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'Float',
+                          ],
+                          [
+                            'String',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                          [
+                            'SSN',
+                          ],
+                        ],
+                      },
+                    },
+                  },
+                  kind: 'task',
+                  type: 'Replace',
+                  parameters: {
+                    with: {
+                      kind: 'constant',
+                      type: 'String',
+                      value: '"',
+                    },
+                    col: {
+                      kind: 'array',
+                      type: 'Array',
+                      value: [
+                        {
+                          kind: 'column',
+                          type: 'Wildcard',
+                          value: '*',
+                          annotations: {
+                            includeLineage: false,
+                            includeFileLineage: false,
+                          },
+                          relation: null,
+                        },
+                      ],
+                    },
+                    type: {
+                      kind: 'bundle',
+                      type: 'Bundle',
+                      value: 'on',
+                    },
+                    on: {
+                      kind: 'constant',
+                      type: 'String',
+                      value: '""',
+                    },
+                    global: {
+                      kind: 'constant',
+                      type: 'Bool',
+                      value: true,
+                    },
+                  },
+                  outputName: null,
+                },
+                tableData: null,
+                portId: null,
+                id: 55079061,
+                hash: '5079f7dd6dc514c9f5d82313f373e54a873129f8',
+                pbemappingartifacts: [],
+                targetmappingartifacts: [],
+                udfscriptlines: [],
+                dependencies: [],
+              },
+              {
+                columnMetadata: null,
+                task: {
+                  annotations: {
+                    outputColumnAnnotations: {
+                      state: {
+                        type: [
+                          'State',
+                        ],
+                        _likely_types: [
+                          [
+                            'State',
+                          ],
+                          [
+                            'String',
+                          ],
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                          [
+                            'SSN',
+                          ],
+                        ],
+                      },
+                      gender: {
+                        type: [
+                          'Gender',
+                        ],
+                        _likely_types: [
+                          [
+                            'Gender',
+                          ],
+                          [
+                            'Bool',
+                          ],
+                          [
+                            'String',
+                          ],
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                        ],
+                      },
+                      year: {
+                        type: [
+                          'Datetime',
+                          'yy',
+                          'yyyy',
+                        ],
+                        _likely_types: [
+                          [
+                            'Datetime',
+                            'yy',
+                            'yyyy',
+                          ],
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'String',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                          [
+                            'SSN',
+                          ],
+                        ],
+                      },
+                      name: {
+                        type: [
+                          'String',
+                        ],
+                        _likely_types: [
+                          [
+                            'String',
+                          ],
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                          [
+                            'SSN',
+                          ],
+                          [
+                            'Map',
+                          ],
+                        ],
+                      },
+                      number: {
+                        type: [
+                          'Integer',
+                        ],
+                        _likely_types: [
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'Float',
+                          ],
+                          [
+                            'String',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                          [
+                            'SSN',
+                          ],
+                        ],
+                      },
+                    },
+                  },
+                  kind: 'task',
+                  type: 'Header',
+                  parameters: {
+                    sanitize: {
+                      kind: 'constant',
+                      type: 'Bool',
+                      value: false,
+                    },
+                    as: {
+                      kind: 'array',
+                      type: 'Array',
+                      value: [
+                        {
+                          kind: 'constant',
+                          type: 'String',
+                          value: 'state',
+                        },
+                        {
+                          kind: 'constant',
+                          type: 'String',
+                          value: 'gender',
+                        },
+                        {
+                          kind: 'constant',
+                          type: 'String',
+                          value: 'year',
+                        },
+                        {
+                          kind: 'constant',
+                          type: 'String',
+                          value: 'name',
+                        },
+                        {
+                          kind: 'constant',
+                          type: 'String',
+                          value: 'number',
+                        },
+                      ],
+                    },
+                  },
+                  outputName: null,
+                },
+                tableData: {
+                  column2: 'state',
+                  column3: 'gender',
+                  column4: 'year',
+                  column5: 'name',
+                  column6: 'number',
+                },
+                portId: null,
+                id: 55079062,
+                hash: '892ddf629f4c73ce1578de130e50ed5602046971',
+                pbemappingartifacts: [],
+                targetmappingartifacts: [],
+                udfscriptlines: [],
+                dependencies: [],
+              },
+            ],
+            dqScriptRules: [],
+          },
+          {
+            id: 8691701,
+            name: 'sum_names_by_years',
+            description: null,
+            active: true,
+            nextPortId: 1,
+            steps: [
+              {
+                columnMetadata: {
+                  state: {
+                    id: '6swsqr0',
+                  },
+                  gender: {
+                    id: '78m15wg',
+                  },
+                  year: {
+                    id: '6s7042k',
+                  },
+                  name: {
+                    id: '6s6rjzg',
+                  },
+                  number: {
+                    id: '7dgeoxg',
+                  },
+                  TRIFACTA__FILE_LINEAGE_INFO: {
+                    id: '4j8uc0m',
+                  },
+                },
+                task: {
+                  annotations: {
+                    hidden: true,
+                  },
+                  kind: 'task',
+                  type: 'Load',
+                  parameters: {
+                    format: {
+                      annotations: {},
+                      kind: 'func',
+                      type: 'FormatBlob',
+                      parameters: {},
+                    },
+                    location: {
+                      kind: 'constant',
+                      type: 'String',
+                      value: 'portId://null',
+                    },
+                    enableLineage: {
+                      kind: 'constant',
+                      type: 'Bool',
+                      value: true,
+                    },
+                    as: {
+                      kind: 'array',
+                      type: 'Array',
+                      value: [
+                        {
+                          kind: 'constant',
+                          type: 'String',
+                          value: 'column1',
+                        },
+                      ],
+                    },
+                  },
+                  outputName: 'original_datasource_3070804',
+                },
+                tableData: null,
+                portId: null,
+                id: 55079063,
+                hash: '14825f435738307aceb38175784295e7f02c1043',
+                pbemappingartifacts: [],
+                targetmappingartifacts: [],
+                udfscriptlines: [],
+                dependencies: [],
+              },
+              {
+                columnMetadata: {},
+                task: {
+                  annotations: {},
+                  kind: 'task',
+                  type: 'Drop',
+                  parameters: {
+                    col: {
+                      kind: 'array',
+                      type: 'Array',
+                      value: [
+                        {
+                          kind: 'column',
+                          type: 'Column',
+                          value: 'state',
+                          relation: null,
+                        },
+                      ],
+                    },
+                    action: {
+                      kind: 'enumerable',
+                      type: 'Enumerable',
+                      value: 'Drop',
+                    },
+                  },
+                  outputName: null,
+                },
+                tableData: null,
+                portId: null,
+                id: 55079621,
+                hash: 'd63bb767454587e846baa532640d96c281b9d3f3',
+                pbemappingartifacts: [],
+                targetmappingartifacts: [],
+                udfscriptlines: [],
+                dependencies: [],
+              },
+              {
+                columnMetadata: {
+                  sum_number: {
+                    id: '3d2g1q4',
+                  },
+                },
+                task: {
+                  annotations: {
+                    outputColumnAnnotations: {
+                      sum_number: {
+                        type: [
+                          'Float',
+                        ],
+                      },
+                    },
+                  },
+                  kind: 'task',
+                  type: 'GroupBy',
+                  parameters: {
+                    type: {
+                      kind: 'enumerable',
+                      type: 'Enumerable',
+                      value: 'agg',
+                    },
+                    group: {
+                      kind: 'array',
+                      type: 'Array',
+                      value: [
+                        {
+                          kind: 'column',
+                          type: 'Column',
+                          value: 'year',
+                          relation: null,
+                        },
+                        {
+                          kind: 'column',
+                          type: 'Column',
+                          value: 'name',
+                          relation: null,
+                        },
+                        {
+                          kind: 'column',
+                          type: 'Column',
+                          value: 'gender',
+                          relation: null,
+                        },
+                      ],
+                    },
+                    value: {
+                      kind: 'array',
+                      type: 'Array',
+                      value: [
+                        {
+                          annotations: {},
+                          kind: 'func',
+                          type: 'Sum',
+                          parameters: {
+                            col: {
+                              kind: 'column',
+                              type: 'Column',
+                              value: 'number',
+                              relation: null,
+                            },
+                          },
+                          as: [
+                            'sum_number',
+                          ],
+                        },
+                      ],
+                    },
+                    as: {
+                      kind: 'array',
+                      type: 'Array',
+                      value: [
+                        {
+                          kind: 'constant',
+                          type: 'String',
+                          value: 'sum_number',
+                        },
+                      ],
+                    },
+                  },
+                  outputName: null,
+                },
+                tableData: null,
+                portId: null,
+                id: 55080181,
+                hash: '6ea290d48019c827489c163d529f8a2a06df3801',
+                pbemappingartifacts: [],
+                targetmappingartifacts: [],
+                udfscriptlines: [],
+                dependencies: [],
+              },
+              {
+                columnMetadata: {},
+                task: {
+                  annotations: {},
+                  kind: 'task',
+                  type: 'Sort',
+                  parameters: {
+                    order: {
+                      kind: 'array',
+                      type: 'Array',
+                      value: [
+                        {
+                          kind: 'column',
+                          type: 'Column',
+                          value: 'year',
+                          relation: null,
+                        },
+                        {
+                          annotations: {},
+                          kind: 'func',
+                          type: 'Negate',
+                          parameters: {
+                            operand: {
+                              kind: 'column',
+                              type: 'Column',
+                              value: 'sum_number',
+                              relation: null,
+                            },
+                          },
+                        },
+                      ],
+                    },
+                  },
+                  outputName: null,
+                },
+                tableData: null,
+                portId: null,
+                id: 55080102,
+                hash: '5c42aafba087fa6c42a0fba42610fb7629cd2745',
+                pbemappingartifacts: [],
+                targetmappingartifacts: [],
+                udfscriptlines: [],
+                dependencies: [],
+              },
+            ],
+            dqScriptRules: [],
+          },
+          {
+            id: 8691957,
+            name: 'top_3_males_per_years',
+            description: null,
+            active: true,
+            nextPortId: 1,
+            steps: [
+              {
+                columnMetadata: {
+                  year: {
+                    id: '-729bmq3',
+                  },
+                  name: {
+                    id: '-729k6t7',
+                  },
+                  gender: {
+                    id: '-6ia9gxz',
+                  },
+                  sum_number: {
+                    id: '-6k72ta7',
+                  },
+                },
+                task: {
+                  annotations: {
+                    hidden: true,
+                  },
+                  kind: 'task',
+                  type: 'Load',
+                  parameters: {
+                    format: {
+                      annotations: {},
+                      kind: 'func',
+                      type: 'FormatBlob',
+                      parameters: {},
+                    },
+                    location: {
+                      kind: 'constant',
+                      type: 'String',
+                      value: 'portId://null',
+                    },
+                    enableLineage: {
+                      kind: 'constant',
+                      type: 'Bool',
+                      value: true,
+                    },
+                    as: {
+                      kind: 'array',
+                      type: 'Array',
+                      value: [
+                        {
+                          kind: 'constant',
+                          type: 'String',
+                          value: 'column1',
+                        },
+                      ],
+                    },
+                  },
+                  outputName: 'original_datasource_9785990',
+                },
+                tableData: null,
+                portId: null,
+                id: 55080590,
+                hash: '8fd7e9d5c9db8730ab15ad35ddba638bcf9c170d',
+                pbemappingartifacts: [],
+                targetmappingartifacts: [],
+                udfscriptlines: [],
+                dependencies: [],
+              },
+              {
+                columnMetadata: {},
+                task: {
+                  annotations: {},
+                  kind: 'task',
+                  type: 'Filter',
+                  parameters: {
+                    type: {
+                      kind: 'bundle',
+                      type: 'Bundle',
+                      value: 'contains',
+                    },
+                    col: {
+                      kind: 'column',
+                      type: 'Column',
+                      value: 'gender',
+                      relation: null,
+                    },
+                    contains: {
+                      kind: 'constant',
+                      type: 'String',
+                      value: 'M',
+                    },
+                    action: {
+                      kind: 'enumerable',
+                      type: 'Enumerable',
+                      value: 'Keep',
+                    },
+                  },
+                  outputName: null,
+                },
+                tableData: null,
+                portId: null,
+                id: 55080702,
+                hash: '6b3d7895e07d67aed5a90df6daa22cfde5afab4b',
+                pbemappingartifacts: [],
+                targetmappingartifacts: [],
+                udfscriptlines: [],
+                dependencies: [],
+              },
+              {
+                columnMetadata: {
+                  rank: {
+                    id: '5bug84i',
+                  },
+                },
+                task: {
+                  annotations: {
+                    outputColumnAnnotations: {
+                      rank: {
+                        type: [
+                          'Integer',
+                        ],
+                        _likely_types: [
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'Float',
+                          ],
+                          [
+                            'String',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                          [
+                            'SSN',
+                          ],
+                        ],
+                      },
+                    },
+                  },
+                  kind: 'task',
+                  type: 'Derive',
+                  parameters: {
+                    type: {
+                      kind: 'bundle',
+                      type: 'Bundle',
+                      value: 'multiple',
+                    },
+                    value: {
+                      annotations: {},
+                      kind: 'func',
+                      type: 'Rank',
+                      parameters: {},
+                    },
+                    order: {
+                      kind: 'array',
+                      type: 'Array',
+                      value: [
+                        {
+                          annotations: {},
+                          kind: 'func',
+                          type: 'Negate',
+                          parameters: {
+                            operand: {
+                              kind: 'column',
+                              type: 'Column',
+                              value: 'sum_number',
+                              relation: null,
+                            },
+                          },
+                        },
+                      ],
+                    },
+                    group: {
+                      kind: 'array',
+                      type: 'Array',
+                      value: [
+                        {
+                          kind: 'column',
+                          type: 'Column',
+                          value: 'year',
+                          relation: null,
+                        },
+                      ],
+                    },
+                    as: {
+                      kind: 'constant',
+                      type: 'String',
+                      value: 'rank',
+                    },
+                  },
+                  outputName: null,
+                },
+                tableData: null,
+                portId: null,
+                id: 55083973,
+                hash: '30876d613e4c35038689e9ce6ef7cdecf12128dc',
+                pbemappingartifacts: [],
+                targetmappingartifacts: [],
+                udfscriptlines: [],
+                dependencies: [],
+              },
+              {
+                columnMetadata: {},
+                task: {
+                  annotations: {},
+                  kind: 'task',
+                  type: 'Sort',
+                  parameters: {
+                    order: {
+                      kind: 'array',
+                      type: 'Array',
+                      value: [
+                        {
+                          kind: 'column',
+                          type: 'Column',
+                          value: 'year',
+                          relation: null,
+                        },
+                        {
+                          annotations: {},
+                          kind: 'func',
+                          type: 'Negate',
+                          parameters: {
+                            operand: {
+                              kind: 'column',
+                              type: 'Column',
+                              value: 'sum_number',
+                              relation: null,
+                            },
+                          },
+                        },
+                      ],
+                    },
+                  },
+                  outputName: null,
+                },
+                tableData: null,
+                portId: null,
+                id: 55083977,
+                hash: '5c42aafba087fa6c42a0fba42610fb7629cd2745',
+                pbemappingartifacts: [],
+                targetmappingartifacts: [],
+                udfscriptlines: [],
+                dependencies: [],
+              },
+              {
+                columnMetadata: {},
+                task: {
+                  annotations: {},
+                  kind: 'task',
+                  type: 'Move',
+                  parameters: {
+                    col: {
+                      kind: 'array',
+                      type: 'Array',
+                      value: [
+                        {
+                          kind: 'column',
+                          type: 'Column',
+                          value: 'rank',
+                          relation: null,
+                        },
+                      ],
+                    },
+                    before: {
+                      kind: 'column',
+                      type: 'Column',
+                      value: 'year',
+                      relation: null,
+                    },
+                    position: {
+                      kind: 'bundle',
+                      type: 'Bundle',
+                      value: 'before',
+                    },
+                  },
+                  outputName: null,
+                },
+                tableData: null,
+                portId: null,
+                id: 55083985,
+                hash: '48ec36bef1d147ec698fcec5c1609535ff659d21',
+                pbemappingartifacts: [],
+                targetmappingartifacts: [],
+                udfscriptlines: [],
+                dependencies: [],
+              },
+              {
+                columnMetadata: {},
+                task: {
+                  annotations: {},
+                  kind: 'task',
+                  type: 'Filter',
+                  parameters: {
+                    type: {
+                      kind: 'bundle',
+                      type: 'Bundle',
+                      value: 'lessThan',
+                    },
+                    col: {
+                      kind: 'column',
+                      type: 'Column',
+                      value: 'rank',
+                      relation: null,
+                    },
+                    lessThan: {
+                      kind: 'constant',
+                      type: 'Integer',
+                      value: 3,
+                    },
+                    lessThanEqual: {
+                      kind: 'constant',
+                      type: 'Bool',
+                      value: true,
+                    },
+                    action: {
+                      kind: 'enumerable',
+                      type: 'Enumerable',
+                      value: 'Keep',
+                    },
+                  },
+                  outputName: null,
+                },
+                tableData: null,
+                portId: null,
+                id: 55084621,
+                hash: 'bf30a6d68784275b24983fda4dfe4abd84403b5a',
+                pbemappingartifacts: [],
+                targetmappingartifacts: [],
+                udfscriptlines: [],
+                dependencies: [],
+              },
+            ],
+            dqScriptRules: [],
+          },
+          {
+            id: 8692774,
+            name: 'top_3_females_per_years',
+            description: null,
+            active: true,
+            nextPortId: 1,
+            steps: [
+              {
+                columnMetadata: {
+                  year: {
+                    id: '-729bmq3',
+                  },
+                  name: {
+                    id: '-729k6t7',
+                  },
+                  gender: {
+                    id: '-6ia9gxz',
+                  },
+                  sum_number: {
+                    id: '-6k72ta7',
+                  },
+                },
+                task: {
+                  annotations: {
+                    hidden: true,
+                  },
+                  kind: 'task',
+                  type: 'Load',
+                  parameters: {
+                    format: {
+                      annotations: {},
+                      kind: 'func',
+                      type: 'FormatBlob',
+                      parameters: {},
+                    },
+                    location: {
+                      kind: 'constant',
+                      type: 'String',
+                      value: 'portId://null',
+                    },
+                    enableLineage: {
+                      kind: 'constant',
+                      type: 'Bool',
+                      value: true,
+                    },
+                    as: {
+                      kind: 'array',
+                      type: 'Array',
+                      value: [
+                        {
+                          kind: 'constant',
+                          type: 'String',
+                          value: 'column1',
+                        },
+                      ],
+                    },
+                  },
+                  outputName: 'original_datasource_9785990',
+                },
+                tableData: null,
+                portId: null,
+                id: 55080590,
+                hash: '8fd7e9d5c9db8730ab15ad35ddba638bcf9c170d',
+                pbemappingartifacts: [],
+                targetmappingartifacts: [],
+                udfscriptlines: [],
+                dependencies: [],
+              },
+              {
+                columnMetadata: {},
+                task: {
+                  annotations: {},
+                  kind: 'task',
+                  type: 'Filter',
+                  parameters: {
+                    type: {
+                      kind: 'bundle',
+                      type: 'Bundle',
+                      value: 'contains',
+                    },
+                    col: {
+                      kind: 'column',
+                      type: 'Column',
+                      value: 'gender',
+                      relation: null,
+                    },
+                    contains: {
+                      kind: 'constant',
+                      type: 'String',
+                      value: 'F',
+                    },
+                    action: {
+                      kind: 'enumerable',
+                      type: 'Enumerable',
+                      value: 'Keep',
+                    },
+                  },
+                  outputName: null,
+                },
+                tableData: null,
+                portId: null,
+                id: 55085905,
+                hash: '6772df656b2e57592032676b9642a70da3291eba',
+                pbemappingartifacts: [],
+                targetmappingartifacts: [],
+                udfscriptlines: [],
+                dependencies: [],
+              },
+              {
+                columnMetadata: {
+                  rank: {
+                    id: '5bug84i',
+                  },
+                },
+                task: {
+                  annotations: {
+                    outputColumnAnnotations: {
+                      rank: {
+                        type: [
+                          'Integer',
+                        ],
+                        _likely_types: [
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'Float',
+                          ],
+                          [
+                            'String',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                          [
+                            'SSN',
+                          ],
+                        ],
+                      },
+                    },
+                  },
+                  kind: 'task',
+                  type: 'Derive',
+                  parameters: {
+                    type: {
+                      kind: 'bundle',
+                      type: 'Bundle',
+                      value: 'multiple',
+                    },
+                    value: {
+                      annotations: {},
+                      kind: 'func',
+                      type: 'Rank',
+                      parameters: {},
+                    },
+                    order: {
+                      kind: 'array',
+                      type: 'Array',
+                      value: [
+                        {
+                          annotations: {},
+                          kind: 'func',
+                          type: 'Negate',
+                          parameters: {
+                            operand: {
+                              kind: 'column',
+                              type: 'Column',
+                              value: 'sum_number',
+                              relation: null,
+                            },
+                          },
+                        },
+                      ],
+                    },
+                    group: {
+                      kind: 'array',
+                      type: 'Array',
+                      value: [
+                        {
+                          kind: 'column',
+                          type: 'Column',
+                          value: 'year',
+                          relation: null,
+                        },
+                      ],
+                    },
+                    as: {
+                      kind: 'constant',
+                      type: 'String',
+                      value: 'rank',
+                    },
+                  },
+                  outputName: null,
+                },
+                tableData: null,
+                portId: null,
+                id: 55083973,
+                hash: '30876d613e4c35038689e9ce6ef7cdecf12128dc',
+                pbemappingartifacts: [],
+                targetmappingartifacts: [],
+                udfscriptlines: [],
+                dependencies: [],
+              },
+              {
+                columnMetadata: {},
+                task: {
+                  annotations: {},
+                  kind: 'task',
+                  type: 'Sort',
+                  parameters: {
+                    order: {
+                      kind: 'array',
+                      type: 'Array',
+                      value: [
+                        {
+                          kind: 'column',
+                          type: 'Column',
+                          value: 'year',
+                          relation: null,
+                        },
+                        {
+                          annotations: {},
+                          kind: 'func',
+                          type: 'Negate',
+                          parameters: {
+                            operand: {
+                              kind: 'column',
+                              type: 'Column',
+                              value: 'sum_number',
+                              relation: null,
+                            },
+                          },
+                        },
+                      ],
+                    },
+                  },
+                  outputName: null,
+                },
+                tableData: null,
+                portId: null,
+                id: 55083977,
+                hash: '5c42aafba087fa6c42a0fba42610fb7629cd2745',
+                pbemappingartifacts: [],
+                targetmappingartifacts: [],
+                udfscriptlines: [],
+                dependencies: [],
+              },
+              {
+                columnMetadata: {},
+                task: {
+                  annotations: {},
+                  kind: 'task',
+                  type: 'Move',
+                  parameters: {
+                    col: {
+                      kind: 'array',
+                      type: 'Array',
+                      value: [
+                        {
+                          kind: 'column',
+                          type: 'Column',
+                          value: 'rank',
+                          relation: null,
+                        },
+                      ],
+                    },
+                    before: {
+                      kind: 'column',
+                      type: 'Column',
+                      value: 'year',
+                      relation: null,
+                    },
+                    position: {
+                      kind: 'bundle',
+                      type: 'Bundle',
+                      value: 'before',
+                    },
+                  },
+                  outputName: null,
+                },
+                tableData: null,
+                portId: null,
+                id: 55083985,
+                hash: '48ec36bef1d147ec698fcec5c1609535ff659d21',
+                pbemappingartifacts: [],
+                targetmappingartifacts: [],
+                udfscriptlines: [],
+                dependencies: [],
+              },
+              {
+                columnMetadata: {},
+                task: {
+                  annotations: {},
+                  kind: 'task',
+                  type: 'Filter',
+                  parameters: {
+                    type: {
+                      kind: 'bundle',
+                      type: 'Bundle',
+                      value: 'lessThan',
+                    },
+                    col: {
+                      kind: 'column',
+                      type: 'Column',
+                      value: 'rank',
+                      relation: null,
+                    },
+                    lessThan: {
+                      kind: 'constant',
+                      type: 'Integer',
+                      value: 3,
+                    },
+                    lessThanEqual: {
+                      kind: 'constant',
+                      type: 'Bool',
+                      value: true,
+                    },
+                    action: {
+                      kind: 'enumerable',
+                      type: 'Enumerable',
+                      value: 'Keep',
+                    },
+                  },
+                  outputName: null,
+                },
+                tableData: null,
+                portId: null,
+                id: 55084621,
+                hash: 'bf30a6d68784275b24983fda4dfe4abd84403b5a',
+                pbemappingartifacts: [],
+                targetmappingartifacts: [],
+                udfscriptlines: [],
+                dependencies: [],
+              },
+            ],
+            dqScriptRules: [],
+          },
+        ],
+        outputobjects: [
+          {
+            id: 1420114,
+            execution: 'dataflow',
+            profiler: true,
+            flowNodeId: 9785990,
+            isAdhoc: true,
+            ignoreRecipeErrors: false,
+            name: null,
+            description: null,
+            publications: [],
+            writesettings: [
+              {
+                delim: ',',
+                id: 2636878,
+                path: 'gs://dataprep-staging-9aef8b97-777c-4156-a2be-4d853fa8477d/maximussi.Max@gmail.com/jobrun/usa_names_1910_current.csv',
+                action: 'create',
+                format: 'csv',
+                compression: 'none',
+                header: false,
+                asSingleFile: false,
+                prefix: null,
+                suffix: '_increment',
+                hasQuotes: true,
+                includeMismatches: true,
+                connectionId: null,
+                runParameters: [],
+              },
+            ],
+            sqlscripts: [],
+            outputobjectdataflowoptions: [
+              {
+                id: 22431373,
+                key: 'autoscalingAlgorithm',
+                value: 'THROUGHPUT_BASED',
+              },
+              {
+                id: 22431371,
+                key: 'machineType',
+                value: 'n1-standard-1',
+              },
+              {
+                id: 22431376,
+                key: 'maxNumWorkers',
+                value: '1000',
+              },
+              {
+                id: 22431372,
+                key: 'network',
+                value: '',
+              },
+              {
+                id: 22431375,
+                key: 'numWorkers',
+                value: '1',
+              },
+              {
+                id: 22431369,
+                key: 'region',
+                value: 'us-central1',
+              },
+              {
+                id: 22431374,
+                key: 'serviceAccount',
+                value: '',
+              },
+              {
+                id: 22431368,
+                key: 'subnetwork',
+                value: '',
+              },
+              {
+                id: 22431377,
+                key: 'usePublicIps',
+                value: 'true',
+              },
+              {
+                id: 22431370,
+                key: 'zone',
+                value: '',
+              },
+            ],
+            outputobjectsparkoptions: [],
+            outputobjectschemadriftoptions: [
+              {
+                id: 1503889,
+                key: 'schemaValidation',
+                value: 'true',
+              },
+              {
+                id: 1503890,
+                key: 'stopJobOnErrorsFound',
+                value: 'false',
+              },
+            ],
+          },
+          {
+            id: 1420224,
+            execution: 'dataflow',
+            profiler: true,
+            flowNodeId: 9786261,
+            isAdhoc: true,
+            ignoreRecipeErrors: false,
+            name: null,
+            description: null,
+            publications: [
+              {
+                path: [
+                  'data-engineer-book-project-1',
+                  'dwh_usnames',
+                ],
+                parameters: {
+                  arrayStrictTypeMatch: 'false',
+                  deleteUnmatchedRowsInTarget: 'false',
+                  externalTableLocation: null,
+                  insertChecked: 'false',
+                  isDeltaTable: 'false',
+                  isExternalTable: 'false',
+                  matchedRowsAction: 'update',
+                  objectStrictTypeMatch: 'false',
+                  strictTypeMatch: 'false',
+                },
+                id: 2500805,
+                tableName: 'top_3_males_per_years',
+                targetType: 'bigquery',
+                action: 'dropAndLoad',
+                connectionId: null,
+                runParameters: [],
+              },
+            ],
+            writesettings: [
+              {
+                delim: ',',
+                id: 2637068,
+                path: 'gs://usa_names_testsolo/top_3_males_per_years.csv',
+                action: 'overwrite',
+                format: 'csv',
+                compression: 'none',
+                header: false,
+                asSingleFile: false,
+                prefix: null,
+                suffix: '_increment',
+                hasQuotes: true,
+                includeMismatches: true,
+                connectionId: null,
+                runParameters: [],
+              },
+            ],
+            sqlscripts: [],
+            outputobjectdataflowoptions: [
+              {
+                id: 22433370,
+                key: 'autoscalingAlgorithm',
+                value: 'THROUGHPUT_BASED',
+              },
+              {
+                id: 22433376,
+                key: 'hostProjectId',
+                value: '',
+              },
+              {
+                id: 22433375,
+                key: 'label.',
+                value: '',
+              },
+              {
+                id: 22433368,
+                key: 'machineType',
+                value: 'n1-standard-1',
+              },
+              {
+                id: 22433373,
+                key: 'maxNumWorkers',
+                value: '1000',
+              },
+              {
+                id: 22433369,
+                key: 'network',
+                value: '',
+              },
+              {
+                id: 22433372,
+                key: 'numWorkers',
+                value: '1',
+              },
+              {
+                id: 22433366,
+                key: 'region',
+                value: 'us-central1',
+              },
+              {
+                id: 22433371,
+                key: 'serviceAccount',
+                value: '',
+              },
+              {
+                id: 22433365,
+                key: 'subnetwork',
+                value: '',
+              },
+              {
+                id: 22433374,
+                key: 'usePublicIps',
+                value: 'true',
+              },
+              {
+                id: 22433367,
+                key: 'zone',
+                value: '',
+              },
+            ],
+            outputobjectsparkoptions: [],
+            outputobjectschemadriftoptions: [
+              {
+                id: 1504193,
+                key: 'schemaValidation',
+                value: 'true',
+              },
+              {
+                id: 1504194,
+                key: 'stopJobOnErrorsFound',
+                value: 'false',
+              },
+            ],
+          },
+          {
+            id: 1420217,
+            execution: 'dataflow',
+            profiler: true,
+            flowNodeId: 9787186,
+            isAdhoc: true,
+            ignoreRecipeErrors: false,
+            name: null,
+            description: null,
+            publications: [
+              {
+                path: [
+                  'data-engineer-book-project-1',
+                  'dwh_usnames',
+                ],
+                parameters: {
+                  arrayStrictTypeMatch: 'false',
+                  deleteUnmatchedRowsInTarget: 'false',
+                  externalTableLocation: null,
+                  insertChecked: 'false',
+                  isDeltaTable: 'false',
+                  isExternalTable: 'false',
+                  matchedRowsAction: 'update',
+                  objectStrictTypeMatch: 'false',
+                  strictTypeMatch: 'false',
+                },
+                id: 2500768,
+                tableName: 'top_3_females_per_years',
+                targetType: 'bigquery',
+                action: 'dropAndLoad',
+                connectionId: null,
+                runParameters: [],
+              },
+            ],
+            writesettings: [
+              {
+                delim: ',',
+                id: 2637034,
+                path: 'gs://usa_names_testsolo/top_3_females_per_years.csv',
+                action: 'overwrite',
+                format: 'csv',
+                compression: 'none',
+                header: false,
+                asSingleFile: false,
+                prefix: null,
+                suffix: '_increment',
+                hasQuotes: true,
+                includeMismatches: true,
+                connectionId: null,
+                runParameters: [],
+              },
+            ],
+            sqlscripts: [],
+            outputobjectdataflowoptions: [
+              {
+                id: 22433101,
+                key: 'autoscalingAlgorithm',
+                value: 'THROUGHPUT_BASED',
+              },
+              {
+                id: 22433107,
+                key: 'hostProjectId',
+                value: '',
+              },
+              {
+                id: 22433106,
+                key: 'label.',
+                value: '',
+              },
+              {
+                id: 22433099,
+                key: 'machineType',
+                value: 'n1-standard-1',
+              },
+              {
+                id: 22433104,
+                key: 'maxNumWorkers',
+                value: '1000',
+              },
+              {
+                id: 22433100,
+                key: 'network',
+                value: '',
+              },
+              {
+                id: 22433103,
+                key: 'numWorkers',
+                value: '1',
+              },
+              {
+                id: 22433097,
+                key: 'region',
+                value: 'us-central1',
+              },
+              {
+                id: 22433102,
+                key: 'serviceAccount',
+                value: '',
+              },
+              {
+                id: 22433096,
+                key: 'subnetwork',
+                value: '',
+              },
+              {
+                id: 22433105,
+                key: 'usePublicIps',
+                value: 'true',
+              },
+              {
+                id: 22433098,
+                key: 'zone',
+                value: '',
+              },
+            ],
+            outputobjectsparkoptions: [],
+            outputobjectschemadriftoptions: [
+              {
+                id: 1504147,
+                key: 'schemaValidation',
+                value: 'true',
+              },
+              {
+                id: 1504148,
+                key: 'stopJobOnErrorsFound',
+                value: 'false',
+              },
+            ],
+          },
+        ],
+        datasources: [
+          {
+            path: '/usa_names_1910_current',
+            bucket: 'usa_names_testsolo',
+            userinfo: null,
+            type: 'gs',
+            host: null,
+            hasDynamicBucket: false,
+            hasDynamicUserInfo: false,
+            hasDynamicHost: false,
+            isDynamicOrConverted: false,
+            id: 3070804,
+            dynamicPath: null,
+            dynamicBucket: null,
+            dynamicHost: null,
+            dynamicUserInfo: null,
+            connectionId: null,
+            isSchematized: true,
+            isDynamic: false,
+            isConverted: false,
+            disableTypeInference: false,
+            hasStructuring: true,
+            hasSchemaErrors: false,
+            parsingScriptId: 8691700,
+            storageLocation: {
+              fullUri: 'gs://usa_names_testsolo/usa_names_1910_current',
+              id: 39230214,
+              path: '/usa_names_1910_current',
+              size: 123578799,
+              type: 'gs',
+              bucket: 'usa_names_testsolo',
+              blobHost: null,
+              container: null,
+              hash: '221786496df9f6caec4c3249f7877514701c2da8',
+              host: null,
+              userinfo: null,
+            },
+            runParameters: [],
+          },
+        ],
+        webhookflowtasks: [],
+      },
+    ],
+    udfscriptartifacts: [],
+  },
+  hash: 'd72kmDWNINV28Fr3V3VMyxDqyj5r1S7c',
+}

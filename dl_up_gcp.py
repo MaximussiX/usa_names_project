@@ -3,7 +3,7 @@ import pandas as pd
 import pandas_gbq as pgbq
 import io
 
-# my credentials
+# my credentials not in git
 import credentials as cred
 
 

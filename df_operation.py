@@ -3,7 +3,7 @@ import pandas as pd
 # my library
 import dl_up_gcp as dl
 
-# my credentials
+# my credentials not in git
 import credentials as cred
 
 

@@ -161,6 +161,7 @@ cython_debug/
 
 
 # OTHER FILES
+CSV/
 *.csv
 .vscode/
 credentials.py

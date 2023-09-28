@@ -106,9 +106,12 @@ def sort_by_names_occurence(df: pd.DataFrame) -> pd.DataFrame:
 
 if __name__ == "__main__":
     print("df operation")
-    df_names = dl.df_from_local_csv("testname.csv")
-    df_states = dl.df_from_local_csv("states.csv")
+    df_names = dl.df_from_local_csv(cred.LOCAL_FILE_NAME)
+    df_states = dl.df_from_local_csv(cred.STATE_CSV)
     df_full = add_statename_df_togbq(df_names, df_states)
+    print(df_full)
     df_state2 = state_abreviation_tobq(df_full, False, cred.TABLE_ID_STATES)
+    print(df_state2)
     df_name_oc = name_occurence_df(df_full, False, cred.TABLE_ID_NAMEOCC)
+    print(df_name_oc)
     df_name_oc_sorted = sort_by_names_occurence(df_name_oc)
